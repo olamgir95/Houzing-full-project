@@ -1,14 +1,14 @@
-import React from "react";
-import { Container } from "./style";
+import React from 'react';
+import { Input } from '../Generic';
+import { Container } from './style';
 
+export const Home = () => {
+  return (
+    <Container>
+      <h1>Home</h1>
+      <Input width={200} placeholder={'test'} />
+    </Container>
+  );
+};
 
-const Home=()=>{
-    return(
-
-        <Container>
-            Homepage
-        </Container>
-    )
-}
-
-export default Home
+export default Home;
