@@ -1,6 +1,7 @@
 import { Dropdown } from 'antd';
 import React, { useRef } from 'react';
 import { Input, Button } from '../Generic';
+
 import { Container, Icons, MenuWrapper, Section } from './style';
 
 export const Filter = () => {
