@@ -26,4 +26,5 @@ const Properties = () => {
     </Container>
   );
 };
+
 export default Properties;
