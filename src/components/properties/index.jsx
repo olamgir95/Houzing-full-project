@@ -1,12 +1,12 @@
-import React from "react";
-import { useEffect } from "react";
-import { Container } from "./style";
-import HouseCard from "../HouseCard";
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Container } from './style';
+import HouseCard from '../HouseCard';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const { REACT_APP_BASE_URL: url } = process.env;
-const Properties = () => {
+
+export const Properties = (props) => {
   const [data, setData] = useState([]);
   const { search } = useLocation();
 
@@ -20,8 +20,8 @@ const Properties = () => {
 
   return (
     <Container>
-      {data.map((value, index) => {
-        return <HouseCard key={index} data={value} />;
+      {data.map((value) => {
+        return <HouseCard key={value.id} data={value} />;
       })}
     </Container>
   );
