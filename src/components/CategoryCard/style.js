@@ -23,16 +23,23 @@ const Img = styled.img`
   width: 100%;
 `;
 const Blur = styled.div`
-  border-radius: 3px;
+  /* border-radius: 3px;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  left: 0; */
+  
 `;
 
-
+// const Content = styled.div`
+//   display: flex;
+//   flex-direction: ${({ footer }) => (footer ? "row" : "column")};
+//   justify-content: ${({ footer }) => footer && "space-between"};
+//   padding-top: 24px;
+//   padding: 16px 20px;
+//   background: white;
+// `;
 const Content = styled.div`
  
   position: absolute;
