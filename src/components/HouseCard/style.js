@@ -1,17 +1,19 @@
-import styled from 'styled-components';
-import { ReactComponent as bed } from '../../assets/icons/bed.svg';
-import { ReactComponent as bath } from '../../assets/icons/bath.svg';
-import { ReactComponent as garage } from '../../assets/icons/garage.svg';
-import { ReactComponent as ruler } from '../../assets/icons/rules.svg';
-import { ReactComponent as love } from '../../assets/icons/love.svg';
-import { ReactComponent as resize } from '../../assets/icons/resize.svg';
+import styled from "styled-components";
+import { ReactComponent as bed } from "../../assets/icons/bed.svg";
+import { ReactComponent as bath } from "../../assets/icons/bath.svg";
+import { ReactComponent as garage } from "../../assets/icons/garage.svg";
+import { ReactComponent as ruler } from "../../assets/icons/rules.svg";
+import { ReactComponent as love } from "../../assets/icons/love.svg";
+import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 const Container = styled.div`
-  width: 380px;
+width: 100%;
+  max-width: 380px;
+  min-width: 330px;
   height: 430px;
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
-  margin: 100px;
+  margin-top: 20px;
 `;
 
 const Img = styled.img`
@@ -22,8 +24,8 @@ const Img = styled.img`
 
 const Content = styled.div`
   display: flex;
-  flex-direction: ${({ footer }) => (footer ? 'row' : 'column')};
-  justify-content: ${({ footer }) => footer && 'space-between'};
+  flex-direction: ${({ footer }) => (footer ? "row" : "column")};
+  justify-content: ${({ footer }) => footer && "space-between"};
   padding-top: 24px;
   padding: 16px 20px;
   background: white;
@@ -32,20 +34,24 @@ const Details = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 16px;
-  .info{
+  .info {
     margin-top: 10px;
   }
 `;
 Details.Item = styled.div`
   display: flex;
   flex-direction: column;
-  flex-direction: ${({ row }) => (row ? 'row' : 'column')};
-  align-items: ${({ footer }) => !footer && 'center'};
+  flex-direction: ${({ row }) => (row ? "row" : "column")};
+  align-items: ${({ footer }) => !footer && "center"};
 `;
-const Icons = styled.div`
-
+const Icons = styled.div` 
+color:red;
 `;
-Icons.Bed = styled(bed)``;
+Icons.Bed = styled(bed)`
+  color: red;
+  
+  font-size: 25px;
+`;
 Icons.Bath = styled(bath)``;
 Icons.Garage = styled(garage)``;
 Icons.Ruler = styled(ruler)``;

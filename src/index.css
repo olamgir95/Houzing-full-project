@@ -19,7 +19,7 @@ body {
   --backgroundPrimary: #0061df;
 
   /* padding */
-  --padding: 0 130px;
+  --padding: 0 100px;
 }
 
 .title {
@@ -56,4 +56,15 @@ line-height: 20px;
 /* Text / Color */
 
 color: #696969;
+}
+.inline{
+  display: flex;
+overflow: hidden;
+white-space: nowrap;
+  
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  font-size: 25px !important;
 }

@@ -10,6 +10,7 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   background: var(--colorPrimary);
+  
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ const Wrapper = styled.div`
   font-size: 16px;
   width: 100%;
   max-width: 1440px;
-  /* max-width: 1440px; */
+ 
 `;
 
 const Section = styled.div`

@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { ReactComponent as arrow } from "../../assets/icons/arrow.svg";
-
+import { ReactComponent as bed } from "../../assets/icons/bed.svg";
+import { ReactComponent as bath } from "../../assets/icons/bath.svg";
+import { ReactComponent as garage } from "../../assets/icons/garage.svg";
+import { ReactComponent as ruler } from "../../assets/icons/rules.svg";
 const Container = styled.div`
-  height: 571px;
+  height: fit-content;
   position: relative;
 `;
 const Arrow = styled(arrow)`
@@ -31,14 +34,14 @@ const Blur = styled.div`
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 `;
 const Content = styled.div`
-.subTitle{
-  color: white;
-  font-size: 20px;
-  margin-top: 20px;
-}
+  .subTitle {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+  }
   top: 134px;
   position: absolute;
   top: 0;
@@ -75,5 +78,64 @@ Content.Desc = styled.div`
 
   color: #ffffff;
 `;
+const Details = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-top: 16px;
+  color: inherit;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 48px;
+  /* identical to box height, or 109% */
 
-export { Container, Arrow, Img, Blur, Content };
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+  .info {
+    margin-top: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    color: #ffffff;
+  }
+`;
+Details.Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+`;
+const Icons = styled.div`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #ffffff;
+`;
+Icons.Bed = styled(bed)`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 24px;
+  color: white;
+  
+`;
+Icons.Bath = styled(bath)``;
+Icons.Garage = styled(garage)``;
+Icons.Ruler = styled(ruler)``;
+
+export { Container, Arrow, Img, Blur, Content, Details, Icons };
