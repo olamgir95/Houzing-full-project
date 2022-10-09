@@ -1,20 +1,4 @@
 [[redirects]]
-
-<<<<<<< HEAD
 from="/*"
 to="/index.html"
 status=200
-
-=======
->>>>>>> 692da65fd00a4c1da18c3f5e92671a046cc2aa43
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-<<<<<<< HEAD
-=======
-from="/*"
-to="/index.html"
-status=200
-
->>>>>>> 692da65fd00a4c1da18c3f5e92671a046cc2aa43
