@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Container, Content } from "./style";
-import Slider from "react-slick";
-import { useNavigate } from "react-router-dom";
-import HouseCard from "../HouseCard";
+import React, { useEffect, useState } from 'react';
+import { Container, Content } from './style';
+import HouseCard from '../HouseCard';
+import Slider from 'react-slick';
+import { useNavigate } from 'react-router-dom';
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
 const settings = {
-  className: "center",
+  className: 'center',
   centerMode: true,
   infinite: true,
-  centerPadding: "25px",
+  centerPadding: '25px',
   slidesToShow: 3,
   speed: 500,
   arrows: true,
@@ -20,7 +20,7 @@ const settings = {
   appendDots: (dots) => <h1> {dots} </h1>,
 };
 
-export const Recomended = () => {
+export const Recommended = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
@@ -31,19 +31,19 @@ export const Recomended = () => {
         setData(res?.data || []);
       });
   }, []);
-  console.log(data);
   return (
     <Container>
       <Content>
-        <h1 className="title">Recomended</h1>
-        <h1 className="info">
+        <h1 className='title'>Recommended</h1>
+        <div className='info'>
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
-        </h1>
+        </div>
       </Content>
       <Slider {...settings}>
         {data.map((value) => {
           return (
             <HouseCard
+            key={value.id}
               gap={10}
               onClick={() => navigate(`/properties?category_id=${value.id}`)}
               data={value}
@@ -55,4 +55,4 @@ export const Recomended = () => {
   );
 };
 
-export default Recomended;
+export default Recommended;
