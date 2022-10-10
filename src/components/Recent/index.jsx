@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Content } from './style';
-import CategoryCard from '../CategoryCard';
-import Slider from 'react-slick';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Container, Content } from "./style";
+import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
+import HouseCard from "../HouseCard";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
 const settings = {
-  className: 'center',
+  className: "center",
   centerMode: true,
   infinite: true,
-  centerPadding: '25px',
+  centerPadding: "25px",
   slidesToShow: 3,
   speed: 500,
   arrows: true,
@@ -20,12 +20,12 @@ const settings = {
   appendDots: (dots) => <h1> {dots} </h1>,
 };
 
-export const GenCarousel = () => {
+export const Recent = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${url}/categories/list`)
+    fetch(`${url}/houses/list`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data || []);
@@ -34,16 +34,17 @@ export const GenCarousel = () => {
   console.log(data);
   return (
     <Container>
-       <Content>
-        <h1 className='title'>Category</h1>
-        <div className='info'>
-        Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
-        </div>
+      <Content>
+        <h1 className="title">Recent Properties for Rent</h1>
+        <h1 className="info">
+          Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
+        </h1>
       </Content>
       <Slider {...settings}>
         {data.map((value) => {
           return (
-            <CategoryCard
+            <HouseCard
+              gap={10}
               onClick={() => navigate(`/properties?category_id=${value.id}`)}
               data={value}
             />
@@ -54,4 +55,4 @@ export const GenCarousel = () => {
   );
 };
 
-export default GenCarousel;
+export default Recent;

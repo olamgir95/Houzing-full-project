@@ -6,14 +6,20 @@ import { ReactComponent as ruler } from "../../assets/icons/rules.svg";
 import { ReactComponent as love } from "../../assets/icons/love.svg";
 import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 const Container = styled.div`
-width: 100%;
+  width: 100%;
   max-width: 380px;
   min-width: 330px;
   height: 430px;
-  filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
+  margin: ${({ gap }) => {
+    return gap && `0 ${gap}px`;
+  }};
+  border: 1px solid #e6e9ec;
+  background:white;
+  
+  /* filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
-    drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
-  margin-top: 20px;
+    drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06)); */
+
 `;
 
 const Img = styled.img`
@@ -44,12 +50,12 @@ Details.Item = styled.div`
   flex-direction: ${({ row }) => (row ? "row" : "column")};
   align-items: ${({ footer }) => !footer && "center"};
 `;
-const Icons = styled.div` 
-color:red;
+const Icons = styled.div`
+  color: red;
 `;
 Icons.Bed = styled(bed)`
   color: red;
-  
+
   font-size: 25px;
 `;
 Icons.Bath = styled(bath)``;

@@ -19,7 +19,7 @@ body {
   --backgroundPrimary: #0061df;
 
   /* padding */
-  --padding: 0 100px;
+  --padding: 0 130px;
 }
 
 .title {
@@ -44,27 +44,31 @@ body {
   color: #0d263b;
 }
 
-.info{
+.info {
+  /* Paragraph/Small/Regular */
+
   font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-/* identical to box height, or 143% */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 8px;
 
-
-/* Text / Color */
-
-color: #696969;
+  color: #696969;
 }
-.inline{
+
+.inline {
   display: flex;
-overflow: hidden;
-white-space: nowrap;
-  
+  overflow: hidden;
+  white-space: nowrap;
 }
+
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
   font-size: 25px !important;
+}
+
+.slick-dots-bottom {
+  width: fit-content !important;
 }

@@ -1,7 +1,7 @@
 import { Container, Content, Details, Img, Icons, Divider } from "./style";
 import noimg from "../../assets/imgs/noimg.jpg";
 
-export const HouseCard = ({ data = {} }) => {
+export const HouseCard = ({ data = {}, gap }) => {
   const {
     attachments,
     salePrice,
@@ -14,7 +14,9 @@ export const HouseCard = ({ data = {} }) => {
     category,
   } = data;
   return (
-    <Container>
+    <div style={{display:"flex"}}>
+
+      <Container gap={gap}>
       <Img src={(attachments && attachments[0]?.imgPath) || noimg} />
       <Content>
         <div className="subTitle inline">
@@ -45,6 +47,7 @@ export const HouseCard = ({ data = {} }) => {
       </Content>
       <Divider />
       <Content footer>
+    
         <Details.Item footer>
           <div className="info">${salePrice || 0}/mo</div>
           <div className="subTitle">${price || 0}/mo</div>
@@ -55,6 +58,7 @@ export const HouseCard = ({ data = {} }) => {
         </Details.Item>
       </Content>
     </Container>
+    </div>
   );
 };
 

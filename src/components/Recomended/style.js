@@ -10,14 +10,12 @@ const Container = styled.div`
   margin: auto;
   margin-top: 96px;
 `;
-
 const Content = styled.div`
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
-  width: 100%;
-  text-align: center;
 `;
 
 export { Container, Content };
