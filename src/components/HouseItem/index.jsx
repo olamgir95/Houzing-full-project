@@ -214,7 +214,7 @@ export const HouseItem = () => {
         </Container>
       </Wrapper>
       <Recent />
-     
+     <Yandex/>
     </React.Fragment>
   );
 };
