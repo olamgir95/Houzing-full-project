@@ -12,7 +12,7 @@ const GenericCarousel = () => {
 
 
   const onChange = (currentSlide) => {
-    console.log(currentSlide);
+    
   };
   const onMove = ({ 
     target: {

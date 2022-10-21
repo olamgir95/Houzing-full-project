@@ -31,7 +31,7 @@ export const GenCarousel = () => {
         setData(res?.data || []);
       });
   }, []);
-  console.log(data);
+ 
   return (
     <Container>
        <Content>

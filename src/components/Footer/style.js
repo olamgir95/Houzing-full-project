@@ -47,8 +47,7 @@ Content.Item = styled.div`
 const Icon = styled.div``;
 Icon.Email = styled(email)`
   margin-right: 21px;
-  width: 54px;
-  height: 54px;
+  
   & path {
     fill: white;
   }

@@ -1,21 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Container = styled.div`
-  padding: 0 130px;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  margin: auto;
+  padding: 0px 130px;
   max-width: 1440px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
   margin-top: 96px;
+ 
 `;
+
 const Content = styled.div`
-  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 32px;
 `;
 
 export { Container, Content };

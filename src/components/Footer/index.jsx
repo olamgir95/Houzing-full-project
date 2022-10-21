@@ -6,7 +6,7 @@ export const Footer = () => {
       <Content>
         <Content.Title>Contact Us</Content.Title>
         <Content.Item>
-          <Icon.Email /> 329 Queensberry Street, North Melbourne VIC 3051, Australia.
+          <Icon.Email /> 329 Queensberry Street, North Melbourne, Australia.
         </Content.Item>
         <Content.Item>
           {' '}

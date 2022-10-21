@@ -16,6 +16,7 @@ const settings = {
   arrows: true,
   adaptiveHeight: true,
   dots: true,
+  
 
   appendDots: (dots) => <h1> {dots} </h1>,
 };
@@ -40,10 +41,10 @@ export const Recommended = () => {
         </div>
       </Content>
       <Slider {...settings}>
-        {data.map((value) => {
+        {data.map((value,index) => {
           return (
             <HouseCard
-            key={value.id}
+            key={index}
               gap={10}
               onClick={() => navigate(`/properties?category_id=${value.id}`)}
               data={value}

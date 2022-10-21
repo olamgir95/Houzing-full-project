@@ -1,8 +1,10 @@
-import React from 'react';
-import useId from '../hooks/useId';
+import React from "react";
+import Signin from "../components/Signin";
+import useId from "../hooks/useId";
 
-const HomePage = React.lazy(() => import('../pages/Home'));
-const Properties = React.lazy(() => import('../pages/Properties'));
+const HomePage = React.lazy(() => import("../pages/Home"));
+const Properties = React.lazy(() => import("../pages/Properties"));
+const HouseItem = React.lazy(() => import("../pages/HouseItem"));
 
 // import HomePage from '../pages/Home';
 // import Properties from '../pages/Properties';
@@ -15,8 +17,8 @@ export const navbar = [
         <HomePage />
       </React.Suspense>
     ),
-    title: 'Home',
-    path: '/home',
+    title: "Home",
+    path: "/home",
     private: false,
     hidden: false,
   },
@@ -27,24 +29,36 @@ export const navbar = [
         <Properties />
       </React.Suspense>
     ),
-    title: 'Properties',
-    path: '/properties',
+    title: "Properties",
+    path: "/properties",
     private: false,
     hidden: false,
   },
   {
     id: useId,
-    element: <h1>Generic Sign In</h1>,
-    title: 'Sign In',
-    path: '/signin',
+    element: (
+      <React.Suspense fallback={<React.Fragment>Loading...</React.Fragment>}>
+        <HouseItem />
+      </React.Suspense>
+    ),
+    title: "Single House",
+    path: "/properties/:id",
+    private: false,
+    hidden: true,
+  },
+  {
+    id: useId,
+    element: <Signin/>,
+    title: "Sign In",
+    path: "/signin",
     private: false,
     hidden: true,
   },
   {
     id: useId,
     element: <h1>Generic Sign Up</h1>,
-    title: 'Sign Up',
-    path: '/signup',
+    title: "Sign Up",
+    path: "/signup",
     private: false,
     hidden: true,
   },
