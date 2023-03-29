@@ -28,7 +28,7 @@ export const HouseItem = () => {
     // request({ url: `/houses/list/${params?.id}` }).then((res) =>
     //   setData(res?.data || [])
     // );
-    fetch(`https://houzing-app.herokuapp.com/api/v1/houses/id/${params?.id}`)
+    fetch(`http://158.51.99.245:8081/swagger-ui.html#/api/v1/houses/id/${params?.id}z`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data);

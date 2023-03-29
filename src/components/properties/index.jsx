@@ -17,7 +17,6 @@ export const Properties = () => {
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
-
   const onSelect = (id) => {
     navigate(`/properties/${id}`);
   };
