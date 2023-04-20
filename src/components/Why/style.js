@@ -1,55 +1,34 @@
-import styled from 'styled-components';
-import { ReactComponent as email } from '../../assets/icons/cardMassage.svg';
-import { ReactComponent as calculator } from '../../assets/icons/calculator.svg';
-import { ReactComponent as cardHouse } from '../../assets/icons/cardHouse.svg';
-import { ReactComponent as cardMaps } from '../../assets/icons/cardMaps.svg';
+import styled from "styled-components";
+import { ReactComponent as discord } from "../../assets/icons/discord.svg";
+import { ReactComponent as house } from "../../assets/icons/house.svg";
+import { ReactComponent as calc } from "../../assets/icons/calculator.svg";
+import { ReactComponent as maps } from "../../assets/icons/maps.svg";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  margin: auto;
-  width: 100%;
-  margin-top: 96px;
-  background: #f5f7fc;
-  padding: 48px 0;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 235px;
-  width: 100%;
+export const Container = styled.div`
+  background-color: var(--gray2);
   text-align: center;
-`;
-const Wrapper = styled.div`
-  max-width: 1440px;
-  width: 100%;
-  padding: 0px 130px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 40px;
-  /* height: 434px; */
-`;
-
-const Icon = styled.div``;
-Icon.Email = styled(email)`
-  margin-bottom: 24px;
-  & path {
-    fill: #0061df;
+  padding: 48px 0;
+  margin-top: 81px;
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .cols {
+    display: flex;
+    column-gap: 60px;
+    > div {
+      text-align: center;
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+    svg {
+      margin-bottom: 24px;
+    }
   }
 `;
-Icon.Calculator = styled(calculator)`
-  margin-bottom: 24px;
-`;
-Icon.House = styled(cardHouse)`
-  margin-bottom: 24px;
-`;
-Icon.Maps = styled(cardMaps)`
-  margin-bottom: 24px;
-`;
 
-export { Container, Content, Wrapper, Icon };
+export const DiscordIc = styled(discord)``;
+export const HouseIc = styled(house)``;
+export const CalcIc = styled(calc)``;
+export const MapsIc = styled(maps)``;

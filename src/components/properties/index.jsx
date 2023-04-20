@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container } from "./style";
-import HouseCard from "../HouseCard";
+import HouseCard from "../HouseCard/HouseCard.jsx";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import useRequest from "../../hooks/useRequest";

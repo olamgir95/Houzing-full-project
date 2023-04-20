@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Content } from './style';
-import HouseCard from '../HouseCard';
+import HouseCard from '../HouseCard/HouseCard.jsx';
 import Slider from 'react-slick';
 import { useNavigate } from 'react-router-dom';
 

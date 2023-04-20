@@ -1,39 +1,54 @@
-import React, { forwardRef } from 'react';
-import { Container, Icon, Wrapper } from './style';
+import { forwardRef } from "react";
+import { Input, Container, Area } from "./style";
 
-export const Input = forwardRef(
-  (
-    {
-      type,
-      onChange,
-      value,
-      defaultValue,
-      placeholder,
-      name,
-      width,
-      height,
-      icon,
-    },
-    ref
-  ) => {
-    return (
-      <Wrapper>
-        <Icon>{icon}</Icon>
-        <Container
-          ref={ref}
-          icon={icon}
-          placeholder={placeholder}
-          name={name}
-          value={value}
-          defaultValue={defaultValue}
-          onChange={onChange}
-          type={type}
-          width={width}
-          height={height}
-        />
-      </Wrapper>
-    );
-  }
-);
+const Input = forwardRef(
+    (
+        {
+            typeInput,
+            value,
+            defaultValue,
+            placeholder,
+            icon,
+            className,
+            name,
+            onPress,
+            width,
+            height,
+            elem="input",
+            style
+        },
+        ref
+    ) => {
+        return (
+            <Container className={className} typeInput={typeInput} width={width} height={height} style={style}>
+                {
+                    icon && <div className="icon">
+                        {icon}
+                    </div>
+                }
+                {
+                    elem === "input" ? 
+                    <Input 
+                        ref={ref}
+                        type={"text"}
+                        value={value}
+                        defaultValue={defaultValue}
+                        placeholder={placeholder}
+                        name={name}
+                        onKeyPress={onPress}
+                    /> : elem === "area" ?
+                    <Area
+                        ref={ref}
+                        value={value}
+                        defaultValue={defaultValue}
+                        placeholder={placeholder}
+                        name={name}
+                        onKeyPress={onPress}
+                    ></Area> : <></>
+                }
+            </Container>
+        )
+    }
+)
 
 export default Input;
