@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import Filter from "../Filter";
-import { Button } from "../Generic/Button";
+import  Button  from "../Generic/Button";
 import { Container, Link, Logo, Main, Menu, Section, Wrapper } from "./style";
 
 import Footer from "../Footer";

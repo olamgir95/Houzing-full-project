@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { ReactComponent as bed } from "../../assets/icons/bed2.svg";
-import { ReactComponent as bath } from "../../assets/icons/bath2.svg";
-import { ReactComponent as car } from "../../assets/icons/car2.svg";
 import { ReactComponent as area } from "../../assets/icons/area2.svg";
+import { ReactComponent as bath } from "../../assets/icons/bath2.svg";
+import { ReactComponent as bed } from "../../assets/icons/bed2.svg";
+import { ReactComponent as car } from "../../assets/icons/car2.svg";
 import { ReactComponent as full } from "../../assets/icons/full.svg";
 import { ReactComponent as like } from "../../assets/icons/like.svg";
 
-export const Container = styled.div`
+const Container = styled.div`
   width: 380px;
   border: 1px solid var(--grayBorder);
   border-radius: 3px;
@@ -58,7 +58,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Info = styled.div`
+const Info = styled.div`
   padding: 24px 20px 0 20px;
   h3 {
     font-size: 14px;
@@ -81,7 +81,7 @@ export const Info = styled.div`
   }
 `;
 
-export const Prices = styled.div`
+const Prices = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,9 +92,10 @@ export const Prices = styled.div`
   }
 `;
 
-export const Bed = styled(bed)``;
-export const Bath = styled(bath)``;
-export const Car = styled(car)``;
-export const Area = styled(area)``;
-export const Full = styled(full)``;
-export const Like = styled(like)``;
+const Bed = styled(bed)``;
+const Bath = styled(bath)``;
+const Car = styled(car)``;
+const Area = styled(area)``;
+const Full = styled(full)``;
+const Like = styled(like)``;
+export { Area, Bath, Bed, Car, Container, Full, Info, Like, Prices };
