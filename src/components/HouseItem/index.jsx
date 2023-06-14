@@ -2,9 +2,10 @@ import { Checkbox } from "antd";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // import useRequest from "../../hooks/useRequest";
-import { Input, Button } from "../Generic";
-import Recent from "../Recent";
 import nouser from "../../assets/imgs/nouser.png";
+import { Button, Input } from "../Generic";
+import { Yandex } from "../Generic/Yandex";
+import Recent from "../Recent";
 import {
   Container,
   Content,
@@ -15,7 +16,6 @@ import {
   User,
   Wrapper,
 } from "./style";
-import { Yandex } from "../Generic/Yandex";
 // import { Yandex } from "../Generic/Yandex";
 // const { REACT_APP_BASE_URL: url } = process.env;
 
@@ -28,7 +28,7 @@ export const HouseItem = () => {
     // request({ url: `/houses/list/${params?.id}` }).then((res) =>
     //   setData(res?.data || [])
     // );
-    fetch(`http://158.51.99.245:8081/swagger-ui.html#/api/v1/houses/id/${params?.id}z`)
+    fetch(`https://houzing-app.herokuapp.com/api/v1/houses/id/${params?.id}z`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data);
@@ -214,7 +214,7 @@ export const HouseItem = () => {
         </Container>
       </Wrapper>
       <Recent />
-     <Yandex/>
+      <Yandex />
     </React.Fragment>
   );
 };

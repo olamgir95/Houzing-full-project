@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { Arrow, Blur, Container, Img, Content,Details, Icons } from "./style";
 import { Carousel } from "antd";
-import img1 from "..//..//assets/imgs/carousel1.png"
-import img2 from "..//..//assets/imgs/carousel2.png"
+import img1 from "..//..//assets/imgs/house1.png"
+import img2 from "..//..//assets/imgs/house2.png"
 
 
 

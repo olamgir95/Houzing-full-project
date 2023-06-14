@@ -1,10 +1,10 @@
 import { Dropdown } from 'antd';
 import React, { useEffect, useRef, useState } from 'react';
-import { Input, Button } from '../Generic';
-import { Container, Icons, MenuWrapper, Section, SelectAnt } from './style';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { uzeReplace } from '../../hooks/useReplace';
-import { useNavigate, useLocation } from 'react-router-dom';
 import useSearch from '../../hooks/useSearch';
+import { Button, Input } from '../Generic';
+import { Container, Icons, MenuWrapper, Section, SelectAnt } from './style';
 
 export const Filter = () => {
   const [data, setData] = useState([]);
@@ -152,7 +152,7 @@ export const Filter = () => {
         </div>
       </Dropdown>
 
-      <Button>
+      <Button width='200px'>
         <Icons.Search /> Search
       </Button>
     </Container>

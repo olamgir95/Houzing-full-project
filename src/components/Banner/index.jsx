@@ -1,7 +1,7 @@
 import React from "react";
 import { Blur, Container, Img, Content } from "./style";
 
-import img1 from "..//..//assets/imgs/carousel2.png";
+import img1 from "..//..//assets/imgs/house2.png";
 
 import { Button } from "../Generic";
 

@@ -19,11 +19,11 @@ const HouseCard = ({
   const navigate = useNavigate();
   const badgeStyles = {
     featured: {
-      background: "var(--primaryBlue)",
+      background: "var(--backgroundPrimary)",
       color: "#fff",
     },
     forSale: {
-      background: "var(--themeColor)",
+      background: "var(--colorPrimary)",
       color: "#fff",
     },
   };

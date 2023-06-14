@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import HouseCard from "../HouseCard/HouseCard.jsx";
 import { Container, Content } from "./style";
+import CardGroup from "../CardGroup/index.jsx";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
@@ -42,7 +43,7 @@ export const Recommended = () => {
       <Slider {...settings}>
         {data.map((value) => {
           return (
-            <HouseCard
+            <CardGroup
               key={value.id}
               gap={10}
               onClick={() => navigate(`/properties?category_id=${value.id}`)}

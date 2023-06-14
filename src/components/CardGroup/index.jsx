@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import Card from '../HouseCard/HouseCard'
+import HouseCard from '../HouseCard/HouseCard.jsx'
 import { Container } from './style'
 import { cards as mock } from '../../mock/data'
 
-const CardGroup = ({title, subtitle, recommended, recent, reloadMode = false}) => {
+const CardGroup = ({ recommended, recent, reloadMode = false}) => {
     const { REACT_APP_BASE_URL: url } = process.env
     const [ data, setData ] = useState(mock)
     useEffect(() => {
@@ -17,13 +17,12 @@ const CardGroup = ({title, subtitle, recommended, recent, reloadMode = false}) =
     }, [])
     return (
         <Container className="container subcontainer">
-            <h1>{title}</h1>
-            <h2>{subtitle}</h2>
+         
             <div className='cards'>
                 {
                     data?.map((house, i) => {
                         return (
-                            <Card
+                            <HouseCard
                                 key={i}
                                 title={house.name}
                                 subtitle={`${house.address}, ${house.country}`}
