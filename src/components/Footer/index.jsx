@@ -1,20 +1,46 @@
-import { Container, Content, Icon } from './style';
+import {
+  Container,
+  Content,
+  Icon,
+  FacebookIcon,
+  TwitterIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  Social,
+  Logo,
+  ArrowUpIcon,
+  Main
+} from "./style";
 
 export const Footer = () => {
+  const scrollToTop = () => {
+    let target = document.getElementById("head");
+    document.querySelector("body").scroll({
+      top: target.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <Container>
+      <Main>
       <Content>
         <Content.Title>Contact Us</Content.Title>
         <Content.Item>
-          <Icon.Email /> 329 Queensberry Street, North Melbourne, Australia.
+          <Icon.Location />
+          329 Queensberry Street, <br /> North Melbourne, Australia.
         </Content.Item>
         <Content.Item>
-          {' '}
           <Icon.Phone /> 123 456 7890
         </Content.Item>
         <Content.Item>
           <Icon.Email /> support@houzing.com
         </Content.Item>
+        <Social className="social">
+          <FacebookIcon />
+          <TwitterIcon />
+          <InstagramIcon />
+          <LinkedinIcon />
+        </Social>
       </Content>
       <Content>
         <Content.Title>Wide Renge Of Properties</Content.Title>
@@ -41,6 +67,20 @@ export const Footer = () => {
         <Content.Item>Support Center</Content.Item>
         <Content.Item>Contact Us</Content.Item>
       </Content>
+      </Main>
+      <div className="fend">
+        <div className="toCenter">
+          <div className="logo">
+            <Logo /> <h3>Houzing</h3>
+          </div>
+          <div className="copyr">
+            <span>Copyright © 2022 CreativeLayers. All Right Reserved.</span>
+            <div className="up" onClick={scrollToTop}>
+              <ArrowUpIcon />
+            </div>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 };

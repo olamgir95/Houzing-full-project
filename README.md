@@ -2,7 +2,7 @@
 
 This project is available on github[Houzing](https://github.com/olamgir95/Houzing95).
 
-## can see the DEMO[Houzing](https://olamgirhouzing.netlify.app).
+## can see the DEMO[Houzing](https://olamgir-houzing.netlify.app).
 ## Available Scripts
 
 In the project directory, you can run:
