@@ -1,16 +1,37 @@
+import { Select } from "antd";
 import styled from "styled-components";
 
-const Container = styled.div`
- 
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-  padding: var(--padding);
-  max-width: 1440px;
+export const Container = styled.div`
   width: 100%;
-  margin-top: 70px;
-  margin: auto;
+  max-width: 1440px;
+  padding: var(--padding);
+`;
+export const Houses = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `;
 
-export { Container };
+export const Head = styled.div`
+  margin-top: 60px;
+  text-align: center;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 0 16px 0;
+    p {
+      margin: 0;
+      font-weight: 400;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-weight: 700;
+    }
+  }
+`;
+
+export const AntSelect = styled(Select)`
+  min-width: 150px;
+  max-width: 150px;
+  width: 100%;
+`;

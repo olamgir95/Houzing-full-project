@@ -1,4 +1,4 @@
-import Proporties from "../../components/properties";
+import Proporties from "../../components/Properties";
 
 const Proportiespage = () => <Proporties />;
 
