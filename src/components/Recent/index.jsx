@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import HouseCard from "../HouseCard/HouseCard.jsx";
 import { Container, Content } from "./style";
 import CardGroup from "../CardGroup/index.jsx";
 

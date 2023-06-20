@@ -5,9 +5,9 @@ import { ReactComponent as calc } from "../../assets/icons/calculator.svg";
 import { ReactComponent as maps } from "../../assets/icons/maps.svg";
 
 export const Container = styled.div`
-  background-color: var(--gray2);
+  background-color: rgb(245, 247, 252);
   text-align: center;
-  padding: 48px 0;
+  padding: 48px ;
   margin-top: 81px;
   h3 {
     font-size: 18px;
@@ -16,10 +16,12 @@ export const Container = styled.div`
   .cols {
     display: flex;
     column-gap: 60px;
+    margin-top: 50px;
     > div {
       text-align: center;
-      h2 {
+      h4 {
         margin-bottom: 0;
+        color: gray;
       }
     }
     svg {

@@ -7,6 +7,12 @@ import { ReactComponent as ruler } from "../../assets/icons/rules.svg";
 const Container = styled.div`
   height: fit-content;
   position: relative;
+  .ant-carousel .slick-dots{
+    margin-left:46%;
+    li button:before{
+      display: none;
+    }
+  }
 `;
 const Arrow = styled(arrow)`
   width: 45px;

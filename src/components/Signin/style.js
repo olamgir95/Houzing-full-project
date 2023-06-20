@@ -13,6 +13,7 @@ export const Form = styled.form`
     border-radius: 3px;
     padding: 0 30px;
     width: 580px;
+    margin: 0 auto;
     >h2{
         text-align: center;
         margin: 1.5rem auto;

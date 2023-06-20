@@ -41,7 +41,8 @@ export const Home = () => {
     </Menu>
   );
   return (
-    <Container>
+    <div id="head">
+    <Container >
       <Main>
         <Wrapper>
           <Section onClick={() => navigate("/home")} logo>
@@ -76,7 +77,7 @@ export const Home = () => {
               </Dropdown>
             ) : (
               <Button onClick={onClick} type="dark">
-                Sign In
+                Sign In 
               </Button>
             )}
           </Section>
@@ -86,6 +87,7 @@ export const Home = () => {
       <Outlet />
       <Footer />
     </Container>
+    </div>
   );
 };
 

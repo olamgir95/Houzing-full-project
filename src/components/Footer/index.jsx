@@ -14,11 +14,8 @@ import {
 
 export const Footer = () => {
   const scrollToTop = () => {
-    let target = document.getElementById("head");
-    document.querySelector("body").scroll({
-      top: target.offsetTop,
-      behavior: "smooth",
-    });
+    let target = document.documentElement;
+    target.scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <Container>
