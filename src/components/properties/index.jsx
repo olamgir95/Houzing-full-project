@@ -21,41 +21,16 @@ const Properties = () => {
   };
   const hsize = useRef(20);
   const [smv, setSmv] = useState(false);
-  console.log("Properties");
-  useEffect(() => {
-    hsize.current = 20;
-    fetch(`${url}houses/list${search}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.status !== 500) {
-          setHousesList(data);
-          data.map.total_elements >= 20 ? setSmv(true) : setSmv(false);
-        } else
-          setHousesList({
-            message: "Internal Server Error",
-            success: false,
-            data: [],
-            map: {
-              size: 0,
-              total_elements: 0,
-              total_pages: 0,
-            },
-          });
-      })
-      .catch(() => {
-        setHousesList({
-          message: "Connection Error",
-          success: false,
-          data: [],
-          map: {
-            size: 0,
-            total_elements: 0,
-            total_pages: 0,
-          },
+
+  const [data, setData] = useState([]);
+  console.log(data, 'data');
+    useEffect(() => {
+      fetch(`${url}/houses/list`)
+        .then(res => res.json())
+        .then(res => {
+          setData(res?.data)
         });
-      });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [changingReq]);
+    }, []);
   const showMore = () => {
     hsize.current =
       hsize.current <= housesList.map.total_elements

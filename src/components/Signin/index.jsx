@@ -25,7 +25,7 @@ const SignIn = () => {
     };
     console.log(reqData);
     if (request)
-      fetch("https://houzing-app.herokuapp.com/api/public/auth/login", {
+      fetch("http://localhost:8081/api/public/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
