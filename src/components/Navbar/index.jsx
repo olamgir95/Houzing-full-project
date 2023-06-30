@@ -2,19 +2,17 @@ import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import Filter from "../Filter";
-import  Button  from "../Generic/Button";
+import Button from "../Generic/Button";
 import { Container, Link, Logo, Main, Menu, Section, Wrapper } from "./style";
 
-import Footer from "../Footer";
 import { Dropdown } from "antd";
+import Footer from "../Footer";
 
 export const Home = () => {
   let token = localStorage.getItem("token");
   const navigate = useNavigate();
 
-  const onClick = () => {
-    navigate("/signin");
-  };
+ 
   const onClickProfile = ({
     target: {
       dataset: { name },
@@ -76,9 +74,7 @@ export const Home = () => {
                 </Button>
               </Dropdown>
             ) : (
-              <Button onClick={onClick} type="dark">
-                Sign In 
-              </Button>
+              <Button type={"dark"} onClick={() => navigate("/profile")}> Login</Button>
             )}
           </Section>
         </Wrapper>

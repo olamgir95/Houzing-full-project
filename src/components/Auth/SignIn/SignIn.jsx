@@ -1,9 +1,9 @@
 import { useContext, useRef, useState } from "react";
 import Loader from "react-js-loader";
 import { useNavigate } from "react-router-dom";
-import { ContextAPI } from "../../context/index.jsx";
-import { Input } from "../Generic";
-import { Form, Remember, Submit } from "./style";
+import { ContextAPI } from "../../../context/index.jsx";
+import { Input } from "../../Generic/index.jsx";
+import { Form, Remember, Submit } from "./style.js";
 
 const SignIn = () => {
   const navigate = useNavigate();
