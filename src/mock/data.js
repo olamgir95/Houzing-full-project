@@ -107,7 +107,7 @@ export const cards = [
   },
 ];
 
-export const t = [
+export const testimonialsData = [
   {
     user: "John Doe",
     job: "Designer",

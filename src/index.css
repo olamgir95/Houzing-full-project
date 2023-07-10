@@ -20,6 +20,8 @@ body {
 
   /* padding */
   --padding: 0 130px;
+  
+  --grayBorder: #E6E9EC;
 }
 
 .title {

@@ -9,7 +9,7 @@
 ._container #navigateAnotherMode{
     font-size: 14px;
     font-weight: 600;
-    color: var(--themeColor);
-    border-bottom: 1px solid var(--themeColor);
+    color: var(--colorPrimary);
+    border-bottom: 1px solid var(--colorPrimary);
     cursor: pointer;
 }

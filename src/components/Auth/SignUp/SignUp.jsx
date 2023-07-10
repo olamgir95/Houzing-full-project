@@ -1,8 +1,7 @@
-// import { Form, Submit, Select } from "../style";
 import { useState } from "react";
 import Loader from "react-js-loader";
 import { Input } from "../../Generic";
-import { Form, Select, Submit } from "./style";
+import { Form, Submit } from "./style";
 
 const SignUp = () => {
     const [regData, setRegData] = useState({})
@@ -10,9 +9,7 @@ const SignUp = () => {
     const onChangeRegData = ({target}) => {
         setRegData({...regData, [target.name]: target.value})
     }
-    const setRole = ({target}) => {
-        setRegData({...regData, "roleIdSet": [target.value]})
-    }
+   
     const register = () => {
         console.log(regData, JSON.stringify(regData), regData.password === regData.rePassword, Object.values(regData).length === 6, Object.values(regData).every((i)=>i), regData.password);
         if(regData.password === regData.rePassword && Object.values(regData).length === 6 && Object.values(regData).every((i)=>i) && regData.password){
@@ -43,19 +40,10 @@ const SignUp = () => {
             <Input name="firstname" theme="classic" type="text" placeholder="First name" onChange={onChangeRegData}/>
             <Input name="lastname" theme="classic" type="text" placeholder="Last name" onChange={onChangeRegData}/>
             <Input name="email" theme="classic" type="text" placeholder="Email" onChange={onChangeRegData}/>
-            <Select name="userRole" onChange={setRole}>
-                <option value={null}>User role</option>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </Select>
             <Input name="password_reg" theme="classic" type="password" placeholder="Password" onChange={onChangeRegData}/>
             <Input name="rePassword_reg" theme="classic" type="password" placeholder="Re-enter password" onChange={onChangeRegData}/>
             <Submit onClick={register}>Register</Submit>
-            { isLoading && <Loader type="hourglass" bgColor={"var(--themeColor)"} title={"Sending Request..."} color={"var(--themeColor)"} size={100} /> }
+            { isLoading && <Loader type="hourglass" bgColor={"var(--colorPrimary)"} title={"Sending Request..."} color={"var(--colorPrimary)"} size={100} /> }
         </Form>
     )
 }

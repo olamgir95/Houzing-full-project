@@ -6,7 +6,7 @@ const getType = ({type}) => {
             return {
                 background: "#fff",
                 borderColor: "#E6E9EC",
-                color: "var(--themeColor)"
+                color: "var(--colorPrimary)"
             }
         case "dark":
             return {

@@ -104,9 +104,9 @@ const SignIn = () => {
       {isLoading && (
         <Loader
           type="hourglass"
-          bgColor={"var(--themeColor)"}
+          bgColor={"var(--colorPrimary)"}
           title={"Getting Data..."}
-          color={"var(--themeColor)"}
+          color={"var(--colorPrimary)"}
           size={100}
         />
       )}

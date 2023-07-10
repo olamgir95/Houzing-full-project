@@ -4,6 +4,7 @@ import GenericCarousel from "../Carousel/";
 import Category from "../Category";
 import Recent from "../Recent";
 import Recomended from "../Recomended";
+import Testimonials from "../Testimonials/Testimonials.jsx";
 import Why from "../Why";
 import { Container } from "./style";
 
@@ -16,6 +17,7 @@ export const Home = () => {
       <Category />
       <Banner />
       <Recent />
+      <Testimonials />
     </Container>
   );
 };

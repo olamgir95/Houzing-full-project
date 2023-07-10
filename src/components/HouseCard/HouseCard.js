@@ -54,7 +54,7 @@ export const Container = styled.div`
         font-weight: 600;
         margin: 0;
         margin-bottom: 4px !important;
-        color: var(--themeColor);
+        color: var(--colorPrimary);
     }
 `
 
